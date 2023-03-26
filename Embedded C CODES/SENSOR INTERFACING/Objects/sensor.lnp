@@ -1,0 +1,3 @@
+".\Objects\sensor.obj" 
+TO ".\Objects\sensor" 
+PRINT(".\Listings\sensor.m51")

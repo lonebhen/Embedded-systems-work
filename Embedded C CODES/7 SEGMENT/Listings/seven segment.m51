@@ -1,0 +1,109 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/31/2022  16:27:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\seven.obj TO .\Objects\seven segment PRINT (.\Listings\seven segment.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\seven.obj (SEVEN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\seven segment (SEVEN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     003EH     UNIT         ?PR?MAIN?SEVEN
+            CODE    083EH     0024H     UNIT         ?PR?_MSDELAY?SEVEN
+            CODE    0862H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\seven segment (SEVEN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SEVEN
+
+?PR?MAIN?SEVEN
+  +--> ?PR?_MSDELAY?SEVEN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\seven segment (SEVEN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SEVEN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:0842H         PUBLIC        _MSDelay
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0800H         LINE#         5
+  C:0800H         LINE#         6
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2022  16:27:45  PAGE 2
+
+
+  C:0800H         LINE#         7
+  C:0803H         LINE#         8
+  C:0806H         LINE#         9
+  C:0809H         LINE#         10
+  C:080CH         LINE#         11
+  C:080FH         LINE#         12
+  C:0812H         LINE#         13
+  C:0815H         LINE#         14
+  C:0818H         LINE#         15
+  C:081BH         LINE#         16
+  C:081EH         LINE#         17
+  C:0821H         LINE#         18
+  C:0824H         LINE#         19
+  C:0827H         LINE#         20
+  C:082AH         LINE#         21
+  C:082DH         LINE#         22
+  C:0830H         LINE#         23
+  C:0833H         LINE#         24
+  C:0836H         LINE#         25
+  C:0839H         LINE#         26
+  C:083CH         LINE#         27
+  -------         ENDPROC       MAIN
+  C:083EH         SYMBOL        L?0014
+  -------         PROC          L?0013
+  -------         ENDPROC       L?0013
+  C:083EH         SYMBOL        L?0014
+  -------         PROC          _MSDELAY
+  D:0006H         SYMBOL        itime
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0842H         LINE#         30
+  C:0842H         LINE#         32
+  C:084CH         LINE#         33
+  C:0861H         LINE#         34
+  -------         ENDPROC       _MSDELAY
+  -------         ENDMOD        SEVEN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0062H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=113
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

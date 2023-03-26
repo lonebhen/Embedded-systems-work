@@ -1,0 +1,93 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/31/2022  14:08:25  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\attempt1.obj TO .\Objects\attempt1 PRINT (.\Listings\attempt1.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\attempt1.obj (ATTEMPT1)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\attempt1 (ATTEMPT1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0020H     UNIT         ?PR?_MSDELAY?ATTEMPT1
+            CODE    0820H     0017H     UNIT         ?PR?MAIN?ATTEMPT1
+            CODE    0837H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\attempt1 (ATTEMPT1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?ATTEMPT1
+
+?PR?MAIN?ATTEMPT1
+  +--> ?PR?_MSDELAY?ATTEMPT1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\attempt1 (ATTEMPT1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ATTEMPT1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        _MSDelay
+  B:0090H.1       PUBLIC        sensor
+  B:0090H.7       PUBLIC        buzzer
+  C:0820H         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  08/31/2022  14:08:25  PAGE 2
+
+
+  C:0820H         LINE#         8
+  C:0820H         LINE#         9
+  C:0820H         LINE#         10
+  C:0823H         LINE#         11
+  C:0825H         LINE#         12
+  C:082CH         LINE#         13
+  C:082EH         LINE#         14
+  C:0835H         LINE#         15
+  C:0835H         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         PROC          _MSDELAY
+  D:0006H         SYMBOL        itime
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         20
+  C:0800H         LINE#         22
+  C:080AH         LINE#         23
+  C:081FH         LINE#         24
+  -------         ENDPROC       _MSDELAY
+  -------         ENDMOD        ATTEMPT1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0037H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=70
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

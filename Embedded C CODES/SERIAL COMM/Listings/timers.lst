@@ -1,0 +1,48 @@
+C51 COMPILER V9.60.0.0   TIMERS                                                            09/12/2022 17:19:17 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TIMERS
+OBJECT MODULE PLACED IN .\Objects\timers.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE timers.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ti
+                    -mers.lst) TABS(2) OBJECT(.\Objects\timers.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          sbit pin = P1^5;
+   4          void timer(void);
+   5          void main(void){
+   6   1        while(1){
+   7   2        pin = 0;
+   8   2        timer();
+   9   2        pin = 1;
+  10   2        timer();
+  11   2        }
+  12   1          
+  13   1      }
+  14          
+  15          void timer(void){
+  16   1        TMOD =0x01;
+  17   1        TL0 = 0XFD;
+  18   1        TH1 = 0X4B;
+  19   1        TR0 = 1;
+  20   1        while(TF0==0);
+  21   1        TR0 = 0;
+  22   1        TF0 = 0;
+  23   1      }
+  24             
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     31    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

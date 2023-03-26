@@ -1,0 +1,3 @@
+".\Objects\buzz.obj" 
+TO ".\Objects\Buzzer" 
+PRINT(".\Listings\Buzzer.m51")

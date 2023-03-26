@@ -1,0 +1,47 @@
+C51 COMPILER V9.60.0.0   BUZZ                                                              09/13/2022 23:25:18 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE BUZZ
+OBJECT MODULE PLACED IN .\Objects\buzz.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE buzz.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\buzz
+                    -.lst) TABS(2) OBJECT(.\Objects\buzz.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          sbit buzzer_pin = P1^7;
+   4          sbit push_pin = P3^0;
+   5          
+   6          
+   7          void main(void){
+   8   1        unsigned int i;
+   9   1        
+  10   1      push_pin = 0;
+  11   1      while(1){ 
+  12   2        while(push_pin == 1);
+  13   2        
+  14   2          
+  15   2        
+  16   2          for(i=0;i<=30;i++){
+  17   3            buzzer_pin =1;
+  18   3            
+  19   3            buzzer_pin = 0;
+  20   3          }
+  21   2        
+  22   2      }
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     28    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
